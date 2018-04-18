@@ -1,0 +1,98 @@
+:root{
+  --prime: #4dad13;
+  --b-shade: #b1b1b1;
+  --bg-color: #dddddd;
+}
+html{
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+body{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container{
+  display: grid;
+  grid-auto-rows: minmax(20vh, auto);
+  grid-gap: .2rem;
+}
+
+header{
+  border: 1px solid var(--b-shade);
+  /* height: auto; */
+  background: var(--bg-color);
+}
+
+.brand{
+  text-align: center;
+  font-size: 2.5em;
+}
+
+nav{
+  /* background: var(--bg-color); */
+  text-align: center;
+  font-size: 1.5em;
+  font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.main-nav a{
+  padding: .4em;
+  text-decoration: none;
+  color: var(--prime);
+  display: block;
+  border: 2px solid var(--prime);
+  background: var(--bg-color);
+  margin-bottom: .2em;
+  text-transform: uppercase;
+  
+}
+
+nav :last-child{
+  margin-bottom: 0;
+}
+
+#about{
+  /* height: auto; */
+  background: var(--bg-color);
+  line-height: 1.2;
+
+}
+ 
+#projects{
+  height: auto;
+  background: var(--prime);
+}
+
+#contact{
+  background: #abcabc;
+}
+form{
+  align-self: center;
+}
+
+.vc{
+  font-size: .7em;
+}
+
+ footer{
+   /* height: auto; */
+   background: var(--prime);
+   border: 2px solid var(--b-shade); 
+  }
+  footer p{
+    text-align: center;
+    padding-top: 2.3rem;
+
+   }
+                                                                 
+
+  
+
+
+
