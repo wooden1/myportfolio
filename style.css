@@ -20,7 +20,7 @@ body{
 .container{
   display: grid;
   grid-auto-rows: minmax(20vh, auto);
-  grid-gap: .2rem;
+  grid-gap: .4rem;
 }
 
 header{
@@ -31,13 +31,13 @@ header{
 
 .brand{
   text-align: center;
-  font-size: 2.5em;
 }
+
 
 nav{
   /* background: var(--bg-color); */
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
@@ -50,7 +50,7 @@ nav{
   background: var(--bg-color);
   margin-bottom: .2em;
   text-transform: uppercase;
-  
+  position: sticky;
 }
 
 nav :last-child{
@@ -68,32 +68,35 @@ nav :last-child{
   top: 95%;
 }
 
-h1{
+.img-txt{
+  background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
-  left: 25%;
-  top: 25%;
+  top:20%;
   color: var(--prime);
   text-align: center;
-  
+  font-size: 2em;
 }
 
 img{
   position:relative;
   width:100%;
-  opacity: 0.9;
-  
 }
 
 #about{
   /* height: auto; */
   background: var(--bg-color);
   line-height: 1.2;
-
+  font-size: 1.2em;
 }
  
 #projects{
-  height: auto;
-  background: var(--prime);
+  background: var(--bg-color);
+  display:grid;
+  grid-auto-rows: minmax(1fr,auto);
+  grid-gap: 0.2em;
+}
+#projects img{
+  border:1px solid var(--prime);
 }
 
 #contact{
@@ -104,7 +107,7 @@ form{
 }
 
 .vc{
-  font-size: .7em;
+  font-size: .6em;
 }
 
  footer{
