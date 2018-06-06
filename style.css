@@ -27,12 +27,19 @@ header{
   border: 1px solid var(--b-shade);
   /* height: auto; */
   background: var(--bg-color);
+
 }
 
 .brand{
   text-align: center;
 }
-
+.fa-laptop{
+  font-size: 4em;
+  color: #222121;
+}
+.web-color{
+  color:var(--prime);
+}
 
 nav{
   /* background: var(--bg-color); */
@@ -50,11 +57,22 @@ nav{
   background: var(--bg-color);
   margin-bottom: .2em;
   text-transform: uppercase;
-  position: sticky;
 }
 
 nav :last-child{
   margin-bottom: 0;
+}
+
+#about{
+  /* height: auto; */
+  background: var(--bg-color);
+  line-height: 1.2;
+  font-size: 1.2em;
+}
+.fa-code-branch{
+  transform: rotate(45deg);
+  background-color: red;
+  font-size: .7em;
 }
 
 .bg-img{
@@ -69,7 +87,7 @@ nav :last-child{
 }
 
 .img-txt{
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   top:20%;
   color: var(--prime);
@@ -82,13 +100,7 @@ img{
   width:100%;
 }
 
-#about{
-  /* height: auto; */
-  background: var(--bg-color);
-  line-height: 1.2;
-  font-size: 1.2em;
-}
- 
+
 #projects{
   background: var(--bg-color);
   display:grid;
@@ -100,7 +112,8 @@ img{
 }
 
 #contact{
-  background: #abcabc;
+  background: linear-gradient(to top right, var(--prime), #0c4e1b);
+  
 }
 form{
   align-self: center;
