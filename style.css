@@ -3,6 +3,8 @@
   --b-shade: #b1b1b1;
   --bg-color: #dddddd;
 }
+@import url('https://fonts.googleapis.com/css?family=Roboto:300i|Sunflower:300');
+
 html{
   box-sizing: border-box;
 }
@@ -14,7 +16,7 @@ html{
   box-sizing: inherit;
 }
 body{
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Sunflower',Georgia, 'Times New Roman', Times, serif;
 }
 
 .container{
@@ -33,10 +35,10 @@ header{
 .brand{
   text-align: center;
 }
-.fa-laptop{
-  font-size: 4em;
-  color: #222121;
+.hide-icon{
+  visibility: hidden;
 }
+
 .web-color{
   color:var(--prime);
 }
@@ -45,7 +47,7 @@ nav{
   /* background: var(--bg-color); */
   text-align: center;
   font-size: 1.2em;
-  font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: 'Roboto',Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .main-nav a{
@@ -113,10 +115,16 @@ img{
 
 #contact{
   background: linear-gradient(to top right, var(--prime), #0c4e1b);
-  
+  display: grid;
+  grid-auto-rows: minmax(1fr,auto);
 }
 form{
   align-self: center;
+}
+button{
+width: 100%;
+height:8vh;
+font-size: 1em;
 }
 
 .vc{
@@ -132,6 +140,32 @@ form{
     text-align: center;
     padding-top: 2.3rem;
 
+   }
+
+   /* Media queries */
+   /* Smartphones */
+   @media (max-width: 599px ){
+      .fa-mobile-alt{
+        visibility: visible;
+        font-size: 4em;
+        color: #222121;
+    }
+   }
+   /* Tablets(portrait and landscape) */
+   @media (min-width: 600px) and (max-width: 899px) {
+     .fa-tablet-alt {
+       visibility: visible;
+       font-size: 4em;
+       color: #222121;
+     }
+
+   }
+   @media(min-width: 900px){
+     .fa-laptop{
+       visibility: visible;
+       font-size: 4em;
+       color: #222121;
+     }
    }
                                                                  
 
