@@ -1,5 +1,5 @@
 :root{
-  --prime: #4dad13;
+  --prime: #4eae13;
   --b-shade: #b1b1b1;
   --bg-color: #dddddd;
 }
@@ -35,9 +35,6 @@ header{
 .brand{
   text-align: center;
 }
-.hide-icon{
-  visibility: hidden;
-}
 
 .web-color{
   color:var(--prime);
@@ -56,8 +53,7 @@ nav{
   color: var(--prime);
   display: block;
   border: 2px solid var(--prime);
-  background: var(--bg-color);
-  margin-bottom: .2em;
+  background: var(--bg-color); 
   text-transform: uppercase;
 }
 
@@ -114,7 +110,8 @@ img{
 }
 
 #contact{
-  background: linear-gradient(to top right, var(--prime), #0c4e1b);
+  background: linear-gradient(to top right, var(--prime), #0c4e1b
+  );
   display: grid;
   grid-auto-rows: minmax(1fr,auto);
 }
@@ -146,23 +143,56 @@ font-size: 1em;
    /* Smartphones */
    @media (max-width: 599px ){
       .fa-mobile-alt{
-        visibility: visible;
         font-size: 4em;
         color: #222121;
     }
+      .main-nav a{
+         margin-bottom: .2em;
+      }
    }
    /* Tablets(portrait and landscape) */
-   @media (min-width: 600px) and (max-width: 899px) {
+   @media (min-width: 600px) and (max-width: 1099px) {
      .fa-tablet-alt {
-       visibility: visible;
        font-size: 4em;
        color: #222121;
      }
+    .main-nav{
+      width: 90px;
+  /* Set a specific width */
+      background-color: #555;
+  /* Dark-grey background */
+    }
 
-   }
-   @media(min-width: 900px){
+    .main-nav a {
+      display: block;
+      /* Make the links appear below each other instead of side-by-side */
+      align-self: center;
+      justify-content: center;
+    /* Center-align text */
+     
+    /* Add some padding */
+      transition: all 1.3s ease;
+    /* Add transition for hover effects */
+
+      }
+      .main-nav span{
+        display: none;
+      }
+
+    .main-nav a:hover {
+      background-color: var(--shade);
+      /* Add a hover color */
+    }
+
+    .active {
+      background-color: #4CAF50;
+      /* Add an active/current color */
+    }
+
+  }
+   /* Laptop */
+   @media(min-width: 1100px){
      .fa-laptop{
-       visibility: visible;
        font-size: 4em;
        color: #222121;
      }
