@@ -158,9 +158,10 @@ font-size: 1em;
      }
     .main-nav{
       width: 90px;
-  /* Set a specific width */
       background-color: #555;
-  /* Dark-grey background */
+      z-index: 1;
+      position: fixed;
+      opacity: .6;
     }
 
     .main-nav a {
@@ -175,7 +176,7 @@ font-size: 1em;
     /* Add transition for hover effects */
 
       }
-      .main-nav span{
+      .nav-text{
         display: none;
       }
 
