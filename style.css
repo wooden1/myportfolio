@@ -21,7 +21,7 @@ body{
 
 .container{
   display: grid;
-  grid-auto-rows: minmax(20vh, auto);
+  grid-template-rows: minmax(20vh, auto);
   grid-gap: .4rem;
 }
 
@@ -46,11 +46,6 @@ header{
   font-family: 'Roboto', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   
 }
-.main-nav a{
-  background: var(--bg-color);
-}
-
-
 
 #about{
   /* height: auto; */
@@ -104,16 +99,12 @@ img{
   background: linear-gradient(to top right, var(--prime), #0c4e1b
   );
   display: grid;
-  grid-auto-rows: minmax(1fr,auto);
+  grid-template-rows: minmax(1fr,auto);
 }
 form{
   align-self: center;
 }
-button{
-  width: 100%;
-  height:8vh;
-  font-size: 1em;
-}
+
 
 .vc{
   font-size: .6em;
@@ -127,7 +118,6 @@ footer{
   footer p{
     text-align: center;
     padding-top: 2.3rem;
-    
   }  
   
   /* Media queries */
@@ -147,10 +137,16 @@ footer{
       text-transform: uppercase;
       margin-bottom: .2em;
       text-align: center;
+      background: var(--bg-color);
     }
     
     nav :last-child {
       margin-bottom: 0;
+    }
+    button {
+      width: 100%;
+      height: 8vh;
+      font-size: 1em;
     }
     
   }
@@ -176,28 +172,33 @@ footer{
         display: block;
         /* Make the links appear below each other instead of side-by-side */
         align-self: center;
-      justify-content: center;
-    /* Center-align text */
-      border:1px solid var(--prime);
-      transition: all 1.3s ease;
-    /* Add transition for hover effects */
-      color: var(--prime);
-      font-size:1.2em;
-      text-align: center;
+        justify-content: center;
+      /* Center-align text */
+        border:1px solid var(--prime);
+        transition: all 1.3s ease;
+      /* Add transition for hover effects */
+        color: var(--prime);
+        font-size:1.2em;
+        text-align: center;
       }
       .nav-text{
         display: none;
       }
 
-    .main-nav a:hover {
-      background-color: var(--shade);
-      /* Add a hover color */
-    }
+      .main-nav a:hover {
+        background-color: var(--shade);
+        /* Add a hover color */
+      }
 
-    .active {
-      background-color: #4CAF50;
+      .active {
+        background-color: #4CAF50;
       /* Add an active/current color */
-    }
+      }
+      button {
+        width: 100%;
+        height: 8vh;
+        font-size: 1em;
+      }
 
   }
    /* Laptop */
@@ -206,21 +207,80 @@ footer{
        font-size: 4em;
        color: #222121;
      }
+     body{
+       background:var(--bg-color);
+     }
+     .container{
+       grid-gap:0;
+     }
      .main-nav{
        width:100%;
-       height:20vh;
-       background:var(--bg-color); 
-       z-index:1;
+       height:10vh;
+       background:var(--prime); 
+       display:flex;
+       text-align: center;
+       
       }
       .main-nav a {
         color: #222121;
         background-color:var(--prime);
+        margin:auto;
+        font-size: 1.2rem;
+        align-self: center;
+        justify-self: center;
      }
      
-     a > i{
-      background: var(--prime);
+     #projects{
+       grid-template-columns: repeat(3, 1fr);
+       grid-column-gap: 1.1rem;
+     }
+     
+     .bg-img{
+       width:90%;
+       margin:auto;
+       margin-top: 2%;
+     }
+     
+     .img-txt{
+      font-size: 3rem;
+     }
+     
+     .img-credit{
+      font-size: .9em;
+     }
+     #about{
+       font-size: 1.3em;
+       height:40vh;
+       display:flex;
+       width:90%;
+       margin:auto;
+     }
+     #about p, .skills{
+       align-self: center;
+     }
+     #projects{
+       width:90%;
+      margin:auto;
+     }
+     
+     button{
+       border: 1px solid #b1b1b1;
+       border-radius: 10%;
+       font-size: 1.1rem;
+       
+     }
+     #contact{
+       height:30vh;
+       margin-top: 2%;
+       font-size: 2rem;
+       text-align: center;
+     }
+     
+     footer{
+       border: 0px;
      }
    }
+   
                                                                  
 
   
