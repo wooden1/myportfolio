@@ -201,7 +201,8 @@ footer{
       }
 
   }
-   /* Laptop */
+  
+  /* Laptop */
    @media(min-width: 1100px){
      .fa-laptop{
        font-size: 4em;
@@ -212,14 +213,30 @@ footer{
      }
      .container{
        grid-gap:0;
+       grid-template-areas: 
+       "header"
+       "nav"
+       "about"
+       "projects"
+       "contact"
+       "footer";
+     }
+     #home{
+       grid-area: "home";
      }
      .main-nav{
        width:100%;
-       height:10vh;
+       /* height:10vh; */
        background:var(--prime); 
        display:flex;
        text-align: center;
-       
+       position: fixed;
+       bottom: 0;
+       z-index: 1;
+       grid-area: "nav";
+       opacity: .5;
+       overflow: hidden;
+       /* top: 20vh; */
       }
       .main-nav a {
         color: #222121;
@@ -233,6 +250,9 @@ footer{
      #projects{
        grid-template-columns: repeat(3, 1fr);
        grid-column-gap: 1.1rem;
+       grid-area: "projects";
+       width:90%;
+       margin:auto;
      }
      
      .bg-img{
@@ -258,26 +278,29 @@ footer{
      #about p, .skills{
        align-self: center;
      }
-     #projects{
-       width:90%;
-      margin:auto;
-     }
+     
      
      button{
        border: 1px solid #b1b1b1;
        border-radius: 10%;
        font-size: 1.1rem;
-       
+       padding: .2em;
      }
      #contact{
        height:30vh;
        margin-top: 2%;
        font-size: 2rem;
        text-align: center;
+       grid-area:"contact";
+     }
+     #contact input{
+       padding: .3em;
      }
      
      footer{
-       border: 0px;
+      border: 0px;
+      background: linear-gradient(to bottom right, var(--prime), #0c4e1b);
+      grid-area: "footer";
      }
    }
    
