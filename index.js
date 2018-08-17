@@ -1,19 +1,16 @@
-// Nav bar text removal for tablet and portrait style
-// :beer:
-// console.log({} + [] === 0);
-// :martial_arts_uniform: :mountain:
+// Sticky navbar 
+const nav = document.querySelector("#main-nav");
+const topOfNav = nav.offsetTop;
+// console.log(topOfNav);
+function fixNav() {
+    if (window.scrollY >= topOfNav) {
+        document.body.style.paddingTop = `${nav.offsetHeight  }px`;
+        document.body.classList.add("fixed-nav");
+    } else {
+        document.body.classList.remove("fixed-nav");
+        document.body.style.paddingTop = 0;
+    }
+}
 
-// function something(n, y) {
-//     if (n <= y ) {
-        
-//         return n / ((y +n) +1);
-//     }
-//     return ('Please enter valid arguments.');
-// }
-// console.log(something(200, 320));
-
-const up = x => x.toUppercase();
-const yea = x =>  x + '!';
-const shout = compose(up, yea);
-
-console.log(shout('send in the clowns'));
+window.addEventListener("scroll", fixNav);
+console.log('This at least works!');

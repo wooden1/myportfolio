@@ -40,7 +40,7 @@ header{
   color:var(--prime);
 }
 
-.main-nav {
+#main-nav {
   /* background: var(--bg-color); */
   font-size: 1.2em;
   font-family: 'Roboto', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -128,7 +128,7 @@ footer{
       color: #222121;
     }
     
-    .main-nav a {
+    #main-nav a {
       padding: .4em;
       text-decoration: none;
       color: var(--prime);
@@ -158,7 +158,7 @@ footer{
        animation-timing-function: ease;
        animation-duration: 1.5ms;
       }
-      .main-nav{
+      #main-nav{
         width: 90px;
         background-color:var(--bg-color);
         z-index: 1;
@@ -168,7 +168,7 @@ footer{
         
       }
       
-      .main-nav a {
+      #main-nav a {
         display: block;
         /* Make the links appear below each other instead of side-by-side */
         align-self: center;
@@ -185,7 +185,7 @@ footer{
         display: none;
       }
 
-      .main-nav a:hover {
+      #main-nav a:hover {
         background-color: var(--shade);
         /* Add a hover color */
       }
@@ -224,21 +224,19 @@ footer{
      #home{
        grid-area: "home";
      }
-     .main-nav{
+     #main-nav{
        width:100%;
        /* height:10vh; */
        background:var(--prime); 
        display:flex;
        text-align: center;
-       position: fixed;
-       bottom: 0;
+       /* bottom: 0; */
        z-index: 1;
        grid-area: "nav";
-       opacity: .5;
-       overflow: hidden;
-       /* top: 20vh; */
+       opacity: .7;
+       font-weight: 700;
       }
-      .main-nav a {
+      #main-nav a {
         color: #222121;
         background-color:var(--prime);
         margin:auto;
@@ -247,6 +245,10 @@ footer{
         justify-self: center;
      }
      
+     .fixed-nav #main-nav{
+       position: fixed;
+       top:0;
+     }
      #projects{
        grid-template-columns: repeat(3, 1fr);
        grid-column-gap: 1.1rem;
